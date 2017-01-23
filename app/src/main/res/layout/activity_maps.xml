@@ -2,15 +2,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android">
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="335dp"
         android:layout_height="wrap_content"
         android:id="@+id/makaney_search"
         android:hint="City,Country,Makaney Code"
         android:textColorLink="?attr/editTextColor" />
 
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        xmlns:android="http://schemas.android.com/apk/res/android">
 
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
@@ -18,4 +30,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="zss.net.makaneycode.MapsActivity" />
+    </LinearLayout>
+
+
 </LinearLayout>
