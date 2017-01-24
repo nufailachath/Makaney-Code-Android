@@ -42,6 +42,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    public void changeMapType(View view){
+        if(mMap.getMapType()== GoogleMap.MAP_TYPE_NORMAL){
+            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            //Toast.makeText(this,"deug",Toast.LENGTH_SHORT).show();
+        }
+        else
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+    }
     public void onSearch(View view){
 
         EditText location_srch= (EditText) findViewById(R.id.makaney_search);
