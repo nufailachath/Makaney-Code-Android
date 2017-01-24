@@ -80,8 +80,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         else{
 
-            //Toast.makeText(this, "We could not find"+location+"\r\n"+
-              //      "Make sure your search is spelled correctly. Try adding a city, state, or zip code.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "We could not find"+location+"\r\n"+
+                   "Make sure your search is spelled correctly. Try adding a city, state, or zip code.", Toast.LENGTH_SHORT).show();
         }
     }
 
