@@ -42,6 +42,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    public void onZooming(View view){
+        if(view.getId() == R.id.zoomIn){
+            mMap.animateCamera(CameraUpdateFactory.zoomIn());
+            }
+        if(view.getId() == R.id.zoomOut){
+            mMap.animateCamera(CameraUpdateFactory.zoomOut());
+        }
+    }
     public void changeMapType(View view){
         if(mMap.getMapType()== GoogleMap.MAP_TYPE_NORMAL){
             mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);

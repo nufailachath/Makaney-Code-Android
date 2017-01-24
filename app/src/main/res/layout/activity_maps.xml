@@ -33,8 +33,12 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/map"
@@ -42,6 +46,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="zss.net.makaneycode.MapsActivity" />
+
+            <Button
+                android:text="+"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zoomIn"
+                android:onClick="onZooming"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="134dp" />
+
+            <Button
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/zoomOut"
+                android:onClick="onZooming"
+                android:layout_below="@+id/zoomIn"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
     </LinearLayout>
 
 
