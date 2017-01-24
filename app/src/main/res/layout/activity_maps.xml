@@ -8,15 +8,14 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:weightSum="1">
     <EditText
-        android:layout_width="304dp"
+        android:layout_width="269dp"
         android:layout_height="wrap_content"
         android:id="@+id/makaney_search"
         android:hint="City,Country,Makaney Code"
-        android:textColorLink="?attr/editTextColor"
-        android:layout_weight="0.63" />
+        android:textColorLink="?attr/editTextColor" />
 
         <Button
-            android:text="SEARCH"
+            android:text="Search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_search"

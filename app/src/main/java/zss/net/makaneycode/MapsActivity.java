@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -59,6 +60,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Sydney"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
+        else{
+
+            //Toast.makeText(this, "We could not find"+location+"\r\n"+
+              //      "Make sure your search is spelled correctly. Try adding a city, state, or zip code.", Toast.LENGTH_SHORT).show();
         }
     }
 
