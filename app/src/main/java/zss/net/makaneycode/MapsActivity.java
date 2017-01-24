@@ -1,7 +1,11 @@
 package zss.net.makaneycode;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -9,6 +13,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -34,6 +41,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
+    public void onSearch(View view){
+
+        EditText location_srch= (EditText) findViewById(R.id.makaney_search);
+        String location = location_srch.getText().toString();
+        List<Address> addressList = null;
+        if( location != null ||  !location.equals("") ){
+            Geocoder geocoder = new Geocoder(this);
+            try {
+               addressList = geocoder.getFromLocationName(location,1);
+
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+             Address address = addressList.get(0);
+            LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(latLng).title("Marker in Sydney"));
+            mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+        }
+    }
+
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
