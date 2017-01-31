@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Makaney Code</string>
     <string name="title_activity_maps">Makaney Code</string>
+    <string name="city_country_makaney_code">City,Country,Makaney Code</string>
+    <string name="search">Search</string>
+    <string name="type">Type</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">-</string>
 </resources>

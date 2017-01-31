@@ -11,18 +11,18 @@
         android:layout_width="201dp"
         android:layout_height="wrap_content"
         android:id="@+id/makaney_search"
-        android:hint="City,Country,Makaney Code"
+        android:hint="@string/city_country_makaney_code"
         android:textColorLink="?attr/editTextColor" />
 
         <Button
-            android:text="Search"
+            android:text="@string/search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btn_search"
             android:onClick="onSearch" />
 
         <Button
-            android:text="Type"
+            android:text="@string/type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/Btype"
@@ -40,15 +40,15 @@
 
             <fragment xmlns:android="http://schemas.android.com/apk/res/android"
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="zss.net.makaneycode.MapsActivity" />
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:id="@+id/map"
+                 android:name="com.google.android.gms.maps.SupportMapFragment"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 tools:context="zss.net.makaneycode.MapsActivity" />
 
             <Button
-                android:text="+"
+                android:text="@string/zoom_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/zoomIn"
@@ -58,7 +58,7 @@
                 android:layout_marginTop="134dp" />
 
             <Button
-                android:text="-"
+                android:text="@string/zoom_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/zoomOut"
